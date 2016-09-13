@@ -1,9 +1,9 @@
 <template>
-    <div class="">
-        <div class="vux-demo">
-            <img class="logo" src="../../assets/vux_logo.png">
-            <h1>{{ msg }}</h1>
-        </div>
+    <div class="index-view">
+        <x-header class = "bg-black" :left-options="{showBack: false}"
+        :right-options="{showMore: false}" @on-click-more="showMenus = true">
+            首页
+        </x-header>
         <foot-bar>
         </foot-bar>
     </div>
@@ -13,27 +13,25 @@
 import Group from 'vux/src/components/group';
 import Cell from 'vux/src/components/cell';
 import FootBar from '../../components/FrameFooter.vue';
+import XHeader from 'vux/src/components/x-header';
 export default {
     components: {
         Group,
         Cell,
-        FootBar
+        FootBar,
+        XHeader
     },
     data () {
         return {
-            msg: 'Hello World!'
         };
     }
 };
 </script>
 
-<style>
-.vux-demo {
-  text-align: center;
-}
-
-.logo {
-  width: 100px;
-  height: 100px
-}
+<style lang="less">
+    .index-view{
+        .bg-black{
+            background-color: #000;
+        }
+    }
 </style>

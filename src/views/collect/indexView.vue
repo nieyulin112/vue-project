@@ -1,23 +1,21 @@
 <template>
-    <div class="message-index-view">
+    <div class="collect-index-view">
         <x-header class = "bg-black" :right-options="{showMore: true}" @on-click-more="showMenus = true">
-            消息
+            收藏
         </x-header>
-        <foot-bar>
-        </foot-bar>
     </div>
 </template>
 
 <script>
 import Group from 'vux/src/components/group';
 import Cell from 'vux/src/components/cell';
-import FootBar from '../../components/FrameFooter.vue';
+import Panel from 'vux/src/components/panel';
 import XHeader from 'vux/src/components/x-header';
 export default {
     components: {
         Group,
         Cell,
-        FootBar,
+        Panel,
         XHeader
     },
     data () {
@@ -28,9 +26,23 @@ export default {
 </script>
 
 <style lang="less">
-    .message-index-view{
+    .collect-index-view{
         .bg-black{
             background-color: #000;
+        }
+        .weui_cells{
+            margin-top:0px;
+        }
+        .vux-no-group-title{
+            margin-top:0px;
+        }
+        .weui_cell_primary{
+            padding-left:10px;
+        }
+        .base-item{
+            width:20px;
+            display: block;
+            margin-right:4px;
         }
     }
 </style>

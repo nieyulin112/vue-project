@@ -28,4 +28,9 @@ npm test
 配置忽略
 cp config/.gitignore_global ~/
 git config --global core.excludesfile ~/.gitignore_global
+下载安装hbuilder
+工具->插件安装->安装egit,重启
+打开目录，选择代码目录
+右键项目->team->共享 配置与git绑定
+
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
